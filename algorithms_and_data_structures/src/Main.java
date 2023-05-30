@@ -1,9 +1,9 @@
-import java.io.InputStream;
 import java.util.Scanner;
 
 import utils.BubbleSorter;
 
 public class Main {
+    private static Scanner scanner = new Scanner(System.in);
     private static int correctAnswers = 0;
     private static String[][] stateCapitalArray = {
             { "Alabama", "Montgomery" },
@@ -59,28 +59,33 @@ public class Main {
     };
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         // showing the original contents of the array
         printArrayContents();
         // sorting the array
-        System.out.println("Sorted by capital");
-        BubbleSorter.sortText(stateCapitalArray);
-        printArrayContents();
+        BubbleSorter.sortByCapitals(stateCapitalArray);
+        // asking questions
+        askQuestions();
+        System.out.println("Thanks for playing, your score is: " + correctAnswers);
         scanner.close();
-        // int[] unsortedArray = { 14, 7, 23, 186, 4, 854, 1, 9 };
-        // for (int number : unsortedArray) {
-        // System.out.println("NUmber: " + number);
-        // }
-        // System.out.println("Sorted");
-        // BubbleSorter.sort(unsortedArray);
-        // for (int number : unsortedArray) {
-        // System.out.println("NUmber: " + number);
-        // }
     }
 
     public static void printArrayContents() {
         for (int i = 0; i < stateCapitalArray.length; i++) {
             System.out.println("State name: " + stateCapitalArray[i][0] + ", capital name: " + stateCapitalArray[i][1]);
+        }
+    }
+
+    private static void askQuestions() {
+        for (int i = 0; i < stateCapitalArray.length; i++) {
+            System.out.println("Please enter the capital name for the following state: " + stateCapitalArray[i][0]);
+            String answer = scanner.nextLine().toLowerCase();
+            // we compare the capital name with the input
+            if (answer.equals(stateCapitalArray[i][1].toLowerCase())) {
+                System.out.println("Correct answer!");
+                correctAnswers++;
+            } else {
+                System.out.println("Incorrect answer. You can do it for the next state.");
+            }
         }
     }
 }
