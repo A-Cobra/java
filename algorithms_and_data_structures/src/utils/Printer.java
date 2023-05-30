@@ -4,6 +4,9 @@ import java.util.Map;
 
 public class Printer {
     public static void printArrayContents(String[][] stateCapitalArray) {
+        System.out.println();
+        System.out.println();
+        System.out.println("Printing a 2d string array");
         for (int i = 0; i < stateCapitalArray.length; i++) {
             System.out.println("State name: " + stateCapitalArray[i][0] + ", capital name: " + stateCapitalArray[i][1]);
         }
