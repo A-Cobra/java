@@ -1,6 +1,13 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
 
 import utils.BubbleSorter;
+import utils.Printer;
+import utils.Text;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
@@ -57,25 +64,43 @@ public class Main {
             { "Wisconsin", "Madison" },
             { "Wyoming", "Cheyenne" }
     };
+    private static Map<String, String> stateCapitalMap = new HashMap<String, String>();
+    private static TreeMap<String, String> stateCapitalTreeMap = new TreeMap<String, String>();
 
     public static void main(String[] args) {
         // showing the original contents of the array
-        printArrayContents();
+        Printer.printArrayContents(stateCapitalArray);
         // sorting the array
         BubbleSorter.sortByCapitals(stateCapitalArray);
+
         // asking questions
-        askQuestions();
+        askCapitalQuestions();
         System.out.println("Thanks for playing, your score is: " + correctAnswers);
+
+        // filling the map and the tree map with the unsorted keys
+        for (String[] stateCapitalPair : stateCapitalArray) {
+            // the normal map
+            stateCapitalMap.put(stateCapitalPair[0], stateCapitalPair[1]);
+            // the sorted tree map
+            stateCapitalTreeMap.put(stateCapitalPair[0], stateCapitalPair[1]);
+        }
+        // displaying the contents of the normal map
+        Printer.printMapContents(stateCapitalMap, "normal");
+        // now we get the state name to search for its capital
+        System.out.println("Please enter a state name to know the capital");
+        String answer = Text.titleCase(scanner.nextLine());
+        // next, we search in the tree map
+        String stateCapital = stateCapitalTreeMap.get(answer);
+        // if the provided state isn't in the map, print not found, else, print the name
+        // of the capital
+        System.out.println(stateCapital != null
+                ? "The capital for the state of " + answer + " is " + stateCapital
+                : "Sorry, the capital wasn't found, please try again");
+
         scanner.close();
     }
 
-    public static void printArrayContents() {
-        for (int i = 0; i < stateCapitalArray.length; i++) {
-            System.out.println("State name: " + stateCapitalArray[i][0] + ", capital name: " + stateCapitalArray[i][1]);
-        }
-    }
-
-    private static void askQuestions() {
+    private static void askCapitalQuestions() {
         for (int i = 0; i < stateCapitalArray.length; i++) {
             System.out.println("Please enter the capital name for the following state: " + stateCapitalArray[i][0]);
             String answer = scanner.nextLine().toLowerCase();
