@@ -49,7 +49,7 @@ Note: To switch between the two learning modes, the user can simply restart the 
 </div>
 
 <div>
-  <img src ="/images/first_mode.PNG">
+  <img src ="images/first_mode.PNG">
   <p>First Mode</p>
 </div>
 
