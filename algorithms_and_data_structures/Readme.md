@@ -12,9 +12,9 @@ This Java console application is a fun and interactive way to learn the states a
 
 ## Installation
 
-1. Clone the repository to your local machine from ``
+1. Clone the repository to your local machine from `https://github.com/A-Cobra/java/tree/develop`
 2. Ensure that you have Java 8 or higher installed on your machine
-3. Open a terminal or command prompt and navigate to the project directory
+3. Open a terminal or command prompt and navigate to the project directory by entering the following command: `cd /path/to/project/directory/algorithms_and_data_structures/src`
 4. Compile the Java source files using the following command:
 
 ```
@@ -40,6 +40,23 @@ In this mode, the user selects a number of states they want to learn, and the ap
 In this mode, the user can input a state name, and the application will return the corresponding capital. This mode is useful for practicing the capital names for specific states.
 
 Note: To switch between the two learning modes, the user can simply restart the application and select the desired mode from the menu.
+
+## Screenshots
+
+<div>
+  <img src ="../images/menu.PNG">
+  <p>Menu</p>
+</div>
+
+<div>
+  <img src ="../images/first_mode.PNG">
+  <p>First Mode</p>
+</div>
+
+<div>
+  <img src ="../images/second_mode.PNG">
+  <p>Second Mode</p>
+</div>
 
 ## Implementation Details
 
