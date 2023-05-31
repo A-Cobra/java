@@ -44,17 +44,17 @@ Note: To switch between the two learning modes, the user can simply restart the 
 ## Screenshots
 
 <div>
-  <img src ="algorithms_and_data_structures/images/menu.PNG">
+  <img src ="images/menu.PNG">
   <p>Menu</p>
 </div>
 
 <div>
-  <img src ="algorithms_and_data_structures/images/first_mode.PNG">
+  <img src ="/images/first_mode.PNG">
   <p>First Mode</p>
 </div>
 
 <div>
-  <img src ="algorithms_and_data_structures/images/second_mode.PNG">
+  <img src ="images/second_mode.PNG">
   <p>Second Mode</p>
 </div>
 
