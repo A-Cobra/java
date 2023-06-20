@@ -4,15 +4,20 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class Connection {
-    private static Connection connection = new Connection();
+public class JPAConnection {
+    private static JPAConnection connection = new JPAConnection();
     private EntityManagerFactory factory;
+    private EntityManager entityManager;
 
-    private Connection() {
+    private JPAConnection() {
+        System.out.println("Creating connection");
+        // PROBLEM HERE
         factory = Persistence.createEntityManagerFactory("JPA_CrudPU");
+        entityManager = factory.createEntityManager();
+        // PROBLEM HERE
     }
 
-    public static Connection getConnection() {
+    public static JPAConnection getConnection() {
         return connection;
     }
 
@@ -21,6 +26,6 @@ public class Connection {
     }
 
     public EntityManager getEntityManager() {
-        return factory.createEntityManager();
+        return entityManager;
     }
 }
