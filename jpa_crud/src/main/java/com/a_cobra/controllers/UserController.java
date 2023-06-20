@@ -15,19 +15,11 @@ public class UserController {
     }
 
     public void createUser(User user) {
-        System.out.println("Created a user");
-
-        // CAUSING ERRORS
-        // JPAConnection.getConnection();
         EntityManager entityManager = getNewEntityManager();
-        // CAUSING ERRORS
-
         try {
-            System.out.println("CREATING A NEW USER");
             entityManager.getTransaction().begin();
-            entityManager.persist(entityManager);
+            entityManager.merge(user);
             entityManager.getTransaction().commit();
-            System.out.println("CREATING A NEW USER EXECUTED CORRECTLY");
         } catch (Exception e) {
             System.out.println("SOMETHING WENT WRONG");
             e.printStackTrace();
@@ -39,7 +31,7 @@ public class UserController {
         EntityManager entityManager = getNewEntityManager();
         try {
             entityManager.getTransaction().begin();
-            entityManager.merge(entityManager);
+            entityManager.merge(user);
             entityManager.getTransaction().commit();
         } catch (Exception e) {
             entityManager.getTransaction().rollback();
@@ -57,7 +49,7 @@ public class UserController {
         EntityManager entityManager = getNewEntityManager();
         try {
             entityManager.getTransaction().begin();
-            entityManager.remove(entityManager);
+            entityManager.remove(user);
             entityManager.getTransaction().commit();
         } catch (Exception e) {
             entityManager.getTransaction().rollback();
