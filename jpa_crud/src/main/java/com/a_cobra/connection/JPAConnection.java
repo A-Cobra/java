@@ -10,11 +10,8 @@ public class JPAConnection {
     private EntityManager entityManager;
 
     private JPAConnection() {
-        System.out.println("Creating connection");
-        // PROBLEM HERE
         factory = Persistence.createEntityManagerFactory("JPA_CrudPU");
         entityManager = factory.createEntityManager();
-        // PROBLEM HERE
     }
 
     public static JPAConnection getConnection() {

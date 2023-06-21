@@ -9,15 +9,21 @@ public class App {
     public static void main(String[] args) {
         UserController userController = new UserController();
         User user = new User(
-                null,
-                "User4",
-                "LastName4",
-                "222222222",
-                "user4@gmail.com",
-                "myWeakPass4");
+                3L,
+                "User3",
+                "LastName3",
+                "333333333",
+                "user3@gmail.com",
+                "myWeakPass3");
 
         // CREATE USER WORKS
         // userController.createUser(user);
+
+        // UPDATE USER WORKS
+        // without specifying an id WORKS
+        // userController.updateUser(user);
+        // with a valid id WORKS
+        userController.updateUser(user);
 
         // GETTING USERS WORKS
         // List<User> users = userController.getAllUsers();
