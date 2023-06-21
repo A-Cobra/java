@@ -17,7 +17,7 @@ public class UserController {
     public void createUser(User user) {
         if (user.getId() != null) {
             throw new IllegalArgumentException(
-                    "User id is automatically set by the API, please sen the user without id");
+                    "User id is automatically set by the API, please send the user without id");
         }
         EntityManager entityManager = getEntityManager();
         try {
@@ -69,7 +69,7 @@ public class UserController {
             }
             entityManager.getTransaction().commit();
         } catch (Exception e) {
-            System.out.println("SOMETHING WENT WRONG");
+            System.out.println("Unsuccessful User Deletion");
             e.printStackTrace();
             entityManager.getTransaction().rollback();
         }

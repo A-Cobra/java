@@ -38,7 +38,7 @@ public class App {
         // System.out.println(optionalUser.get());
         // }
 
-        // DELETE USERS
+        // DELETE USERS WORKS
         userController.deleteUser(user);
     }
 }
