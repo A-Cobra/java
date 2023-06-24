@@ -26,18 +26,18 @@ public class App {
         // User update works fine
         // User userToUpdate = new User(
         // 3L,
-        // "USER3",
+        // "User3",
         // "LastName3",
         // "444444444",
         // "user3@gmail.com",
-        // "myWeakPass3!");
+        // "myWeakPass3");
         // Boolean userIsUpdated = userController.updateUser(userToUpdate);
         // System.out.println(
         // userIsUpdated ? "User with id " + userToUpdate.getId() + " successfully
         // updated"
         // : "Failure in update");
 
-        // Single user by id works fine
+        // // Single user by id works fine
         Optional<User> existingUser = userController.getUSerById(1);
         if (existingUser.isPresent()) {
             System.out.println(existingUser.get());
