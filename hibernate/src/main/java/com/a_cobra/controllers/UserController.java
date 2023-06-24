@@ -34,4 +34,21 @@ public class UserController {
         session.close();
         return new User();
     }
+
+    public boolean removeUser(long id) {
+        Session session = sessionFactory.openSession();
+        try {
+            Transaction tx = session.beginTransaction();
+            // managed entity
+            User user = session.get(User.class, id);
+            session.remove(user);
+            tx.commit();
+            session.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        session.close();
+        return false;
+    }
 }

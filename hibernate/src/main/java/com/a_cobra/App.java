@@ -14,5 +14,9 @@ public class App {
         // "444444444",
         // "user4@gmail.com",
         // "myWeakPass3");
+        // Removing User
+        long id = 5;
+        System.out.println(
+                userController.removeUser(id) ? "User with id " + id + " successfully removed" : "Failure in removal");
     }
 }
