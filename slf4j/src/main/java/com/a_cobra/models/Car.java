@@ -1,4 +1,4 @@
 package com.a_cobra.models;
 
-public record Car(String color, int speed) {
+public record Car(int id, String color, int topSpeed) {
 }
