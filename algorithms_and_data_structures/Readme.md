@@ -44,17 +44,17 @@ Note: To switch between the two learning modes, the user can simply restart the 
 ## Screenshots
 
 <div>
-  <img src ="images/menu.PNG">
+  <img src ="images/menu.PNG" style="border: solid 2px rgb(267,231,206);">
   <p>Menu</p>
 </div>
 
 <div>
-  <img src ="images/first_mode.PNG">
+  <img src ="images/first_mode.PNG" style="border: solid 2px rgb(267,231,206);">
   <p>First Mode</p>
 </div>
 
 <div>
-  <img src ="images/second_mode.PNG">
+  <img src ="images/second_mode.PNG" style="border: solid 2px rgb(267,231,206);">
   <p>Second Mode</p>
 </div>
 
