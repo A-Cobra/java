@@ -4,7 +4,7 @@
   <p style="flex: 1 1 540px;">
     This repository contains several Java projects that showcase different Java technologies and concepts. The projects are mostly developed under a CLI or console interface.
   </p>
-  <img src="./slf4j/images/java.png" style="flex: 0 0 150px; max-width:100px;" >
+  <img src="./slf4j/images/java.png" style="flex: 0 0 150px;" width="100px" >
 </div>
 
 ## Projects
@@ -29,7 +29,7 @@ This project is a car garage events simulation that uses SLF4J for logging. The 
 
 This project is a classic snake game built using the Swing library. The game allows the user to control a snake and eat food to grow longer. The game ends if the snake runs into a wall or its own body. This project demonstrates the use of the Swing library to create a simple game.
 
-<image src="./snake_game/images/snake_game.PNG" style="width:100%;max-width:250px">
+<image src="./snake_game/images/snake_game.PNG" width="250px" >
 
 ## License
 
