@@ -28,7 +28,7 @@ The layered architecture promotes separation of concerns and modularity, making 
 
 To run the application, follow these steps:
 
-1. Clone the project from GitHub: `git clone https://github.com/A-Cobra/java/tree/develop`
+1. Clone the project from GitHub: `git clone https://github.com/A-Cobra/java`
 2. Navigate to the following folder: `hibernate`
 3. Switch branches by using the following command: `git checkout develop`
 4. Open the project in your IDE (Integrated Development Environment) of choice
