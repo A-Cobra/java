@@ -12,7 +12,7 @@ This Java console application is a fun and interactive way to learn the states a
 
 ## Installation
 
-1. Clone the repository to your local machine from `https://github.com/A-Cobra/java/tree/develop`
+1. Clone the repository to your local machine from `https://github.com/A-Cobra/java`
 2. Ensure that you have Java 8 or higher installed on your machine
 3. Open a terminal or command prompt and navigate to the project directory by entering the following command: `cd /path/to/project/directory/algorithms_and_data_structures/src`
 4. Compile the Java source files using the following command:
