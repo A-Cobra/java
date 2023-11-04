@@ -8,7 +8,7 @@ To run the game, you will need to have the Java Development Kit (JDK) installed 
 
 Once you have installed the JDK, you can open the project in your favorite Java IDE, such as Eclipse or IntelliJ IDEA. You can also use a text editor and compile the code using the command line.
 
-Alternatively, you can simply double-click the "Snake_Game.jar" file that is included in the project files to launch the game. 
+Alternatively, you can simply double-click the "Snake_Game.jar" file that is included in the project files to launch the game.
 
 ## How to Play
 
@@ -46,7 +46,7 @@ This game was created as a way to practice and improve Java skills and was inspi
 
 ## License
 
-This project is licensed under the Apache License.
+This project is licensed under the [Apache License](../LICENSE).
 
 ## Conclusion
 
